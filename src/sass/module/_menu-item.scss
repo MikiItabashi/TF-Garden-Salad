@@ -1,0 +1,157 @@
+.menu-item {}
+
+.menu-item__img {
+    position: relative;
+    transform: translate(-2%, 16%);
+    text-align: center;
+    z-index: 2;
+    img {
+        max-width: rem(435);
+        max-height: rem(435);
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    @include mq('md') {
+        left: 50%;
+        // top: rem(-261);
+        transform: translate(-52%, 13%);
+        img {
+            max-width: rem(308);
+        }
+    }
+}
+
+.menu-item__img--recommend {
+    // top: rem(-51);
+    // left: rem(-363);
+    transform: translate(13%, -4%);
+    @include mq('lg') {
+        transform: translate(0, -4%);
+    }
+    @include mq('md') {
+        top: rem(0);
+        left: 50%;
+        transform: translate(-53%, 58px);
+        z-index: 1;
+    }
+}
+
+.menu-item__recommend {
+    background: $green;
+    color: $text-white;
+    text-align: center;
+    padding: rem(9) rem(51) rem(14);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq('md') {}
+}
+
+.menu-item__recommend-en {
+    font-family: $third-font-family;
+    font-size: rem(14);
+    line-height: rem(20.17);
+    @include mq('md') {
+        font-size: rem(12);
+        margin-top: rem(28);
+    }
+}
+
+.menu-item__recommend-jp {
+    font-weight: 500;
+    font-size: rem(24);
+    line-height: rem(34.75);
+    white-space: nowrap;
+    @include mq('md') {
+        font-size: rem(18);
+        white-space: nowrap;
+        margin-top: rem(-6);
+    }
+}
+
+.menu-item__body {
+    position: relative;
+    background: $white;
+    padding: rem(13);
+    @include mq('md') {
+        padding: rem(9);
+    }
+}
+
+.menu-item__body--recommend {
+    transform: translate(rem(-25), rem(-6));
+    width: 55%;
+    @include mq('md') {
+        transform: translate(0, rem(23));
+        width: 100%;
+    }
+}
+
+.menu-item__wrapper {
+    border: 1px solid $text-black;
+    text-align: center;
+    padding: rem(60) 0 rem(29);
+    @include mq('md') {
+        padding: rem(48) 0 rem(29);
+    }
+}
+
+.menu-item__wrapper--recommend {
+    padding: rem(100) 0 rem(32);
+    @include mq('md') {
+        padding: rem(111) 0 rem(29);
+    }
+}
+
+.menu-item__title {
+    font-size: rem(30);
+    font-weight: 700;
+    line-height: rem(43.44);
+    letter-spacing: 0.1em;
+    @include mq('md') {
+        font-size: rem(24);
+        line-height: rem(36);
+    }
+}
+
+.menu-item__price {
+    margin-top: rem(9);
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    @include mq('md') {
+        font-size: rem(12);
+    }
+}
+
+.menu-item__price--yen {
+    font-family: $second-font-family;
+    font-size: rem(24);
+    margin-right: rem(7);
+    font-weight: 400;
+    @include mq('md') {
+        font-size: rem(18);
+    }
+}
+
+.menu-item__price--price {
+    font-family: $second-font-family;
+    font-size: rem(40);
+    letter-spacing: 0.1em;
+    margin-right: rem(-5);
+    font-weight: 400;
+    @include mq('md') {
+        font-size: rem(30);
+    }
+}
+
+.menu-item__ingredient {
+    margin-top: rem(17);
+    font-size: rem(24);
+    letter-spacing: 0.07em;
+    @include mq('md') {
+        margin-top: rem(15);
+        font-size: rem(14);
+    }
+}

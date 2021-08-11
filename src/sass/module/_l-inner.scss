@@ -1,0 +1,82 @@
+@import "../function/function";
+.l-inner {
+    width: 100%;
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $inner + strip-unit($padding-pc) * 2;
+    @include mq("md") {
+        padding-right: $padding-sp;
+        padding-left: $padding-sp;
+    }
+}
+
+.l-inner--header {
+    padding-left: rem(31);
+    padding-right: rem(71);
+    max-width: $max-inner;
+    @include mq('md') {
+        padding-right: $padding-sp;
+        padding-left: $padding-sp;
+    }
+}
+
+.l-inner--main {
+    padding-top: rem(90);
+    padding-right: 0;
+    padding-left: 0;
+    max-width: $max-inner;
+    @include mq('md') {
+        max-width: rem(500);
+        padding-top: rem(60);
+    }
+}
+
+.l-inner--about {
+    padding-top: rem(130);
+    padding-bottom: rem(150);
+    @include mq('md') {
+        max-width: rem(400);
+        padding-top: rem(64);
+        padding-bottom: rem(64);
+    }
+}
+
+.l-inner--menu {
+    @include mq('md') {
+        max-width: rem(400);
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.l-inner--shop {
+    padding-top: rem(110);
+    padding-bottom: rem(120);
+    padding-right: 0;
+    padding-left: 0;
+    max-width: $max-inner;
+    @include mq('md') {
+        padding-top: rem(65);
+        padding-right: $padding-sp;
+        padding-left: $padding-sp;
+        padding-bottom: rem(65);
+    }
+}
+
+.l-inner--shop-card {
+    max-width: rem(1196);
+    @include mq('md') {
+        max-width: rem(400);
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.l-inner--contact {
+    max-width: rem(800);
+    @include mq('md') {
+        max-width: rem(400);
+    }
+}

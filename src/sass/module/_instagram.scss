@@ -1,0 +1,111 @@
+.instagram {
+    padding: rem(13);
+    background: $white;
+    position: relative;
+    @include mq('md') {
+        padding: rem(9);
+    }
+}
+
+.instagram__wrapper {
+    border: 1px solid $text-black;
+    text-align: center;
+    padding: rem(88) rem(43) rem(37);
+    @include mq('md') {
+        padding: rem(63) rem(8) rem(37);
+    }
+}
+
+.instagram__title {
+    background: $green;
+    font-family: $second-font-family;
+    font-size: rem(30);
+    padding: rem(13) rem(107);
+    color: $text-white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq('md') {
+        padding: rem(6) rem(35);
+        font-size: rem(24);
+        letter-spacing: 0.05em;
+    }
+}
+
+.instagram__body {}
+
+.instagram__lead {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.05em;
+    &::before,
+    &::after {
+        content: "";
+        width: rem(36);
+        height: rem(1);
+        background: $text-black;
+    }
+    &::before {
+        margin-left: rem(16);
+        transform: translate(rem(0), rem(13)) rotate(54deg);
+    }
+    &::after {
+        margin-right: rem(16);
+        transform: translate(rem(0), rem(13)) rotate(-54deg);
+    }
+    @include mq('md') {
+        padding: 0 rem(13);
+        text-align: left;
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.instagram__images {
+    display: flex;
+    justify-content: center;
+    margin-top: rem(34);
+    overflow-x: auto;
+    white-space: nowrap;
+    @include mq('md') {
+        margin-top: rem(22);
+        flex-wrap: wrap;
+        overflow-x: visible;
+    }
+}
+
+.instagram__img {
+    &:not(:last-child) {
+        margin-right: rem(16);
+    }
+    img {
+        min-width: rem(229);
+    }
+    @include mq('md') {
+        &:not(:last-child) {
+            margin-right: rem(0);
+        }
+        img {
+            min-width: auto;
+        }
+        width: calc((100% - #{rem(10)} * 1) / 2);
+        // width: 50%;
+        &:nth-child(2n + 1) {
+            margin-right: rem(10);
+        }
+        &:nth-child(n + 3) {
+            margin-top: rem(10);
+        }
+    }
+}
+
+.instagram__id {
+    margin-top: rem(8);
+}
+
+.instagram__btn {
+    margin-top: rem(39);
+}

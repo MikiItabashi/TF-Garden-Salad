@@ -1,0 +1,23 @@
+.about {
+    background: $white;
+}
+
+.about__inner {}
+
+.about__title {}
+
+.about__items {
+    margin-top: rem(93);
+    @include mq('md') {
+        margin-top: rem(66);
+    }
+}
+
+.about__item {
+    &:not(:last-child) {
+        margin-bottom: rem(64);
+        @include mq('md') {
+            margin-bottom: rem(56);
+        }
+    }
+}

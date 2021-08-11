@@ -1,0 +1,104 @@
+.form {
+    text-align: left;
+    dd {
+        width: 100%;
+    }
+    dt {}
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: rem(16);
+        box-shadow: none;
+        border: 1px solid $black;
+        background: $white;
+        padding: rem(11) rem(23);
+        appearance: none;
+        color: inherit;
+        font-family: inherit;
+        width: 100%;
+        margin-top: rem(4);
+        background: $text-white;
+        transition: .3s;
+        &:hover,
+        &:focus {
+            border: 1px solid $green;
+            box-shadow: 0 0 8px $green;
+        }
+        @include mq('md') {
+            margin-top: rem(6);
+            padding: rem(15) rem(15);
+        }
+    }
+    textarea {
+        height: rem(160);
+        resize: vertical;
+    }
+    input[type="checkbox"] {
+        opacity: 0;
+        width: 0;
+    }
+    input[type="checkbox"]:checked+span {
+        &::after {
+            opacity: 1;
+        }
+    }
+    input[type="submit"] {
+        box-shadow: none;
+        appearance: none;
+        font-family: inherit;
+        border: none;
+        color: $text-white;
+        background: $green;
+        display: inline-block;
+        padding: rem(15) rem(101);
+        transition: .3s;
+        &:hover {
+            opacity: $opacity;
+        }
+        &:disabled {
+            background: #BDBDBD;
+            &:hover {
+                opacity: 1;
+                cursor: auto;
+            }
+        }
+        @include mq('md') {
+            width: 100%;
+        }
+    }
+}
+
+.form__items {}
+
+.form__item {
+    &:not(:last-child) {
+        margin-bottom: rem(33);
+        @include mq('md') {
+            margin-bottom: rem(31);
+        }
+    }
+}
+
+.form__label {}
+
+.form__required {
+    background: $green;
+    color: $text-white;
+    font-size: rem(12);
+    margin-left: rem(16);
+    padding: rem(1) rem(6);
+    border-radius: rem(6);
+    @include mq('md') {
+        margin-left: rem(10);
+    }
+}
+
+.form__input {}
+
+.form__btn {
+    text-align: center;
+    margin-top: rem(31);
+    @include mq('md') {
+        margin-top: rem(37);
+    }
+}

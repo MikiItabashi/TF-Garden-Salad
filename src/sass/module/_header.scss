@@ -1,0 +1,35 @@
+.header {
+    position: fixed;
+    width: 100%;
+    height: rem(90);
+    background: $black;
+    z-index: 10;
+    @include mq('md') {
+        height: rem(60);
+    }
+}
+
+.header__inner {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    height: inherit;
+    a {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        img {
+            width: rem(115.84);
+            @include mq('md') {
+                width: rem(54.05);
+            }
+        }
+    }
+}
+
+.header__nav {
+    height: inherit;
+}

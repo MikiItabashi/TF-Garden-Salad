@@ -1,0 +1,23 @@
+.section-img {
+    min-height: rem(450);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include mq('md') {
+        min-height: rem(250);
+    }
+}
+
+.section-img--salad {
+    background-image: url(../images/common/salad.png);
+    @include mq('md') {
+        background-image: url(../images/common/salad-big.png);
+    }
+}
+
+.section-img--store {
+    background-image: url(../images/common/store.png);
+    @include mq('md') {
+        background-image: url(../images/common/store-big.png);
+    }
+}

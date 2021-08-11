@@ -1,0 +1,62 @@
+.nav {}
+
+.nav__items {
+    height: inherit;
+    display: flex;
+    justify-content: end;
+}
+
+.nav__item {
+    height: inherit;
+    a {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        color: $text-white;
+        font-family: $second-font-family;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: rem(27);
+            width: 0%;
+            height: rem(1);
+            background: $green;
+            transition: 0.3s;
+        }
+        &:hover {
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+    &:not(:last-child) {
+        margin-right: rem(40);
+    }
+    @include mq('md') {
+        a {
+            font-size: rem(14);
+            &::before {
+                bottom: rem(15);
+            }
+        }
+        &:not(:last-child) {
+            margin-right: rem(20);
+        }
+    }
+}
+
+.nav__item--black {
+    a {
+        color: $text-black;
+        &::before {
+            bottom: rem(-2);
+        }
+    }
+    @include mq('md') {
+        &:not(:last-child) {
+            margin-right: rem(38);
+        }
+    }
+}

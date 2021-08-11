@@ -1,0 +1,11 @@
+/* FontFamily */
+
+$base-font-family: 'Noto Sans JP',
+sans-serif;
+$second-font-family: reross-quadratic,
+sans-serif;
+$third-font-family: 'Satisfy',
+cursive;
+body {
+    font-family: $base-font-family;
+}

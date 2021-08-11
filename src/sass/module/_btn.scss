@@ -1,0 +1,34 @@
+.btn {
+    padding: rem(17) rem(77) rem(16) rem(58);
+    font-size: rem(16);
+    font-weight: 700;
+    line-height: rem(23.17);
+    border: 1px solid $text-black;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        background-image: url(../images/common/Vector.svg);
+        width: rem(16);
+        height: rem(16);
+        bottom: rem(19);
+        right: rem(37);
+    }
+    &:hover {
+        background: $text-black;
+        color: $text-white;
+        &::before {
+            background-image: url(../images/common/Vector-white.svg);
+        }
+    }
+    @include mq('md') {
+        white-space: nowrap;
+        padding: rem(17) rem(58) rem(16) rem(35);
+        &::before {
+            width: rem(13.82);
+            height: rem(13.82);
+            bottom: rem(21);
+            right: rem(21);
+        }
+    }
+}

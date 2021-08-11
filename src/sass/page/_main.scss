@@ -1,0 +1,132 @@
+.main {
+    background: $black;
+    position: relative;
+    overflow: hidden;
+}
+
+.main__inner {
+    position: relative;
+}
+
+.main__body {
+    color: $text-white;
+    z-index: 5;
+    position: absolute;
+    top: rem(174);
+    left: rem(178);
+    @include mq('md') {
+        left: rem(19);
+        top: rem(89);
+    }
+}
+
+.main__img {
+    text-align: right;
+    img {
+        width: 75%;
+        @include mq('md') {
+            width: 82%;
+        }
+    }
+}
+
+.main__title {
+    font-family: $second-font-family;
+    font-size: rem(100);
+    line-height: rem(100);
+    letter-spacing: 0;
+    @include mq('md') {
+        font-size: rem(36);
+        line-height: rem(38);
+    }
+}
+
+.main__title--strong {
+    color: $green;
+}
+
+.main__lead {
+    margin-top: rem(51);
+    margin-left: rem(21);
+    display: inline-block;
+    font-size: rem(32);
+    line-height: rem(46.34);
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    @include mq('md') {
+        font-size: rem(14);
+        line-height: rem(20.27);
+        font-weight: 500;
+        margin-top: rem(17);
+        margin-left: rem(4);
+    }
+}
+
+.main__lead--strong {
+    background: $green;
+    margin-left: rem(1);
+    margin-top: rem(22);
+    padding: rem(8) rem(20) rem(9) 0;
+    @include mq('md') {
+        margin-top: rem(9);
+        padding: rem(3) rem(3) rem(7) 0;
+    }
+}
+
+.main__content {
+    color: $text-white;
+    text-align: center;
+    padding: rem(120) 0 rem(110);
+    position: relative;
+    z-index: 1;
+    @include mq('md') {
+        padding: rem(48) 0 rem(34);
+    }
+}
+
+.main__message {
+    margin-bottom: rem(48);
+    font-weight: 700;
+    font-size: rem(30);
+    letter-spacing: 0.05em;
+    @include mq('md') {
+        margin-bottom: rem(24);
+        font-size: rem(20);
+        line-height: rem(30);
+    }
+}
+
+.main__text {
+    &:not(:last-child) {
+        margin-bottom: rem(27);
+    }
+    @include mq('md') {
+        margin-bottom: rem(24);
+        padding: 0 rem(32);
+    }
+}
+
+.main__back {
+    position: absolute;
+    overflow: hidden;
+    bottom: rem(-111);
+    left: rem(-43);
+    width: 100%;
+    @include mq('md') {
+        text-align: right;
+        height: inherit;
+        bottom: rem(-7);
+        left: rem(-10);
+    }
+}
+
+.main__back-text {
+    font-family: $second-font-family;
+    font-size: rem(280);
+    color: rgba(103, 103, 103, 0.3);
+    white-space: nowrap;
+    @include mq('md') {
+        font-size: rem(110);
+        line-height: rem(88);
+    }
+}

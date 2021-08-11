@@ -1,0 +1,135 @@
+.shop-card {
+    background: $text-white;
+    padding: rem(30) rem(33) rem(42);
+    position: relative;
+    &::before {
+        z-index: 1;
+        position: absolute;
+        content: "";
+        top: rem(-68);
+        left: rem(-98);
+        width: rem(288);
+        height: rem(240);
+        background: url(../images/common/stamp.svg) no-repeat center center / contain;
+    }
+    @include mq('md') {
+        padding: rem(18) rem(10) rem(111);
+        &::before {
+            top: rem(-40);
+            left: rem(-17);
+            width: rem(112);
+            height: rem(93);
+        }
+    }
+}
+
+.shop-card__images {
+    display: flex;
+    justify-content: center;
+    @include mq('md') {
+        display: block;
+    }
+}
+
+.shop-card__img {
+    position: relative;
+    display: block;
+    img {
+        width: 100%;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        width: calc(100% - #{rem(19.5)} * 2);
+        height: calc(100% - #{rem(19.5)} * 2);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: transparent;
+        border: 1px solid $text-white;
+        padding: 10px;
+        @include mq('md') {
+            width: calc(100% - #{rem(14.13)} * 2);
+            height: calc(100% - #{rem(12.53)} * 2);
+        }
+    }
+}
+
+.shop-card__img--terrace {}
+
+.shop-card__img--takeout {}
+
+.shop-card__body {
+    margin-top: rem(27);
+    display: flex;
+    position: relative;
+    @include mq('md') {
+        display: block;
+        margin-top: rem(20);
+    }
+}
+
+.shop-card__title {
+    font-family: $third-font-family;
+    font-size: rem(48);
+    letter-spacing: 0.05em;
+    width: rem(242);
+    margin-left: rem(10);
+    @include mq('md') {
+        font-size: rem(30);
+        margin-left: rem(14);
+        width: 100%;
+    }
+}
+
+.shop-card__text__wrapper {
+    max-width: rem(613);
+    padding-top: rem(20);
+    @include mq('md') {
+        max-width: 100%;
+        padding-top: 0;
+    }
+}
+
+.shop-card__text {
+    font-size: rem(16);
+    line-height: rem(40);
+    width: 100%;
+    letter-spacing: 0;
+    padding: 0 rem(9);
+    background: linear-gradient(transparent 97%, #C4C4C4 1px) $text-white;
+    background-size: auto 2.5em;
+    overflow: hidden;
+    @include mq('md') {
+        padding: 0 0 0 rem(13);
+    }
+}
+
+.shop-card__message {
+    font-family: $third-font-family;
+    color: $green;
+    font-size: rem(40);
+    line-height: rem(57.62);
+    letter-spacing: 0.05em;
+    position: absolute;
+    bottom: rem(-6);
+    right: rem(8);
+    transform: rotate(-6deg);
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: rem(1);
+        background: $green;
+        left: 0;
+        bottom: rem(11);
+    }
+    &::after {
+        bottom: rem(5);
+    }
+    @include mq('md') {
+        font-size: rem(36);
+        bottom: rem(-52);
+    }
+}

@@ -1,0 +1,51 @@
+.title {
+    text-align: center;
+}
+
+.title__jp {
+    font-weight: 700;
+    color: $green;
+    @include mq('md') {
+        font-size: rem(14);
+    }
+}
+
+.title__jp--white {
+    color: $text-white;
+}
+
+.title__en {
+    margin-top: rem(3);
+    font-size: rem(48);
+    font-family: $second-font-family;
+    position: relative;
+    letter-spacing: 0.05em;
+    &::before {
+        position: absolute;
+        content: "";
+        width: rem(50);
+        height: rem(1);
+        bottom: rem(-14);
+        left: 50%;
+        transform: translateX(-50%);
+        background: $green;
+    }
+    @include mq('md') {
+        font-size: rem(32);
+        &::before {
+            bottom: rem(-9);
+        }
+    }
+}
+
+.title__en--white {
+    color: $text-white;
+    &::before {
+        background: $text-white;
+    }
+}
+
+.title__en--small {
+    font-size: rem(24);
+    margin-top: rem(8);
+}
